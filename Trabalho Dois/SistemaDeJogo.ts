@@ -10,7 +10,7 @@ class Jogo {
         
     }
     get():void{
-        console.log(`|| Título do jogo: ${this.titulo}|| Gênero é ${this.genero}\n|| Classificação: ${this.classificacao} anos.`)
+        console.log(`|| Título do jogo: ${this.titulo}|| Gênero: ${this.genero}\n|| Classificação: ${this.classificacao} anos.`)
     }
 }
 
@@ -38,7 +38,7 @@ class bibliotecaDeJogos {
 }
 rmJogo(jogo):void{
     this.getJogos()
-    let nomeremovido = rl.question('Qual jogo deseja remover')
+    let nomeremovido = rl.question('A remoção de qual jogo é desejada?')
     this.jogos = this.jogos.filter(jogo => jogo.titulo !== nomeremovido)
 }
 getJogos():void{
